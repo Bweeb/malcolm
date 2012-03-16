@@ -1,6 +1,6 @@
 module Malcolm
   # Response middleware that unwraps a SOAP envelope for you
-  class SOAPParser < Faraday::Middleware
+  class SOAPParser < Faraday::Response::Middleware
     dependency 'nori'
     
     Nori.configure do |config|
