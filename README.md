@@ -1,7 +1,12 @@
-Malcolm is a collection of middleware for [Faraday](https://github.com/technoweenie/faraday), the excellent HTTP client interface based on [Rack](http://rack.github.com/)
+# Malcolm [![Malcolm Build Status][Build Icon]][Build Status]
 
-Note on Patches/Pull Requests
------------------------------
+Malcolm is a collection of middleware for [Faraday](https://github.com/technoweenie/faraday),
+the excellent HTTP client interface based on [Rack](http://rack.github.com/).
+
+[Build Icon]: https://secure.travis-ci.org/site5/malcolm.png?branch=master
+[Build Status]: https://travis-ci.org/site5/malcolm
+
+## Note on Patches/Pull Requests
 
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -12,7 +17,6 @@ Note on Patches/Pull Requests
   commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-Copyright
----------
+## Copyright
 
 Copyright (c) 2012 Site5.com. See LICENSE for details.
