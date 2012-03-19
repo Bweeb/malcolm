@@ -3,8 +3,8 @@ PATH
   specs:
     malcolm (0.0.1)
       faraday (~> 0.8.0rc2)
-      nori
-      xml-simple
+      nori (~> 1.1.0)
+      xml-simple (~> 1.1.1)
 
 GEM
   remote: http://rubygems.org/
