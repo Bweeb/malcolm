@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    malcolm (0.0.1)
+    malcolm (0.0.2)
       faraday (~> 0.8.0rc2)
       nori (~> 1.1.0)
       xml-simple (~> 1.1.1)
