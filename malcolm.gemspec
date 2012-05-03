@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors   = ['Floyd Wright']
   s.email     = 'fwright@site5.com'
 
-  s.files     = %w[ Rakefile README.md ]
+  s.files     = %w[ Rakefile README.markdown ]
   s.files    += Dir['lib/**/*']
   s.files    += Dir['spec/**/*']
 
