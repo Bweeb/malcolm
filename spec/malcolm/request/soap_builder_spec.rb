@@ -24,5 +24,12 @@ describe Malcolm::SOAPBuilder do
     expect { middleware.call(env) }.to raise_error
   end
   
+  it "ignores empty data" do
+    middleware = described_class.new(lambda{|env| env})
+    env = {:body => {}, :request_headers => Faraday::Utils::Headers.new}
+    result = middleware.call(env)
+    xml = result[:body]
+    xml.should include %{<env:Body></env:Body>}    
+  end
 
 end
