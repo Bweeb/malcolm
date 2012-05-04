@@ -14,9 +14,10 @@ module Malcolm
     
     # Builds an XML document around request data
     def wrap(data)
-      raise "Request body already serialized.  Please make sure it is a hash before applying SOAP Builder." unless data.is_a?(Hash)
       "<?xml version=\"1.0\" encoding=\"UTF-8\"?><env:Envelope xmlns:env=\"http://schemas.xmlsoap.org/soap/envelope/\"><env:Body>".tap do |soap_envelope|
-        soap_envelope << XmlSimple.xml_out(data, :keep_root => true) unless data.blank?
+        unless data.blank?
+          soap_envelope << (data.is_a?(Hash) ? XmlSimple.xml_out(data, :keep_root => true) : data)
+        end
         soap_envelope << "</env:Body></env:Envelope>"
       end
     end
