@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.files    += Dir['spec/**/*']
 
   s.add_runtime_dependency 'faraday', '~> 0.8.0rc2'
-  s.add_runtime_dependency 'xml-simple', '~> 1.1.1'
+  s.add_runtime_dependency 'gyoku', '~> 0.4.4'
   s.add_runtime_dependency 'nori', '~> 1.1.0'
 
   s.add_development_dependency 'rake', '~> 0.9.2.2'
