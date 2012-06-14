@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     malcolm (0.0.3)
-      faraday (~> 0.8.0rc2)
+      faraday (~> 0.8.1)
       gyoku (~> 0.4.4)
       nori (~> 1.1.0)
 
