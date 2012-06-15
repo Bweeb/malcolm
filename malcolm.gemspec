@@ -2,7 +2,7 @@ $:.unshift 'lib'
 
 Gem::Specification.new do |s|
   s.name      = 'malcolm'
-  s.version   = '0.0.3'
+  s.version   = '0.0.4'
   s.platform  = Gem::Platform::RUBY
   s.date      = Time.now.strftime('%Y-%m-%d')
   s.summary   = 'A collection of Faraday middleware'
