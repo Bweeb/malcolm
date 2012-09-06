@@ -2,24 +2,27 @@ module Malcolm
   # Response middleware that unwraps a SOAP envelope for you
   class SOAPParser < Faraday::Response::Middleware
     dependency 'nori'
-    
+
     Nori.configure do |config|
       config.strip_namespaces = true
       config.convert_tags_to { |tag| tag.snakecase.to_sym }
     end
-    
+
     def initialize(env, *args)
       key = args[0]
       super(env)
     end
-  
+
     # Expects response XML to already be parsed
     def on_complete(env)
       env[:body] = Nori.parse(env[:body])
+
+      raise SOAPError, "Invalid SOAP response" if env[:body].empty?
+
       env[:body] = env[:body][:envelope][:body]
       env[:body] = find_key_in_hash(env[:body], @key)
     end
-    
+
   private
 
     # Finds +index+ in +hash+ by searching recursively
@@ -42,6 +45,6 @@ module Malcolm
         end
       end
     end
-    
+
   end
 end
