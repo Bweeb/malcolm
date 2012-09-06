@@ -1,4 +1,5 @@
 require 'faraday'
+require 'malcolm/exceptions'
 
 module Malcolm
   autoload :SOAPBuilder, 'malcolm/request/soap_builder'
@@ -6,7 +7,7 @@ module Malcolm
 
   Faraday.register_middleware :request,
     :soap => SOAPBuilder
-    
+
   Faraday.register_middleware :response,
     :soap => SOAPParser
 
