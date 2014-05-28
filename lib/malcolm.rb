@@ -1,14 +1,13 @@
 require 'faraday'
+require 'nori'
+require 'gyoku'
 require 'malcolm/exceptions'
 
 module Malcolm
   autoload :SOAPBuilder, 'malcolm/request/soap_builder'
   autoload :SOAPParser,  'malcolm/response/soap_parser'
 
-  Faraday.register_middleware :request,
-    :soap => SOAPBuilder
+  Faraday::Request.register_middleware soap: SOAPBuilder
 
-  Faraday.register_middleware :response,
-    :soap => SOAPParser
-
+  Faraday::Response.register_middleware soap: SOAPParser
 end

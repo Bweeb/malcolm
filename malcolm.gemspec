@@ -14,9 +14,10 @@ Gem::Specification.new do |s|
   s.files    += Dir['lib/**/*']
   s.files    += Dir['spec/**/*']
 
-  s.add_runtime_dependency 'faraday', '~> 0.8.1'
-  s.add_runtime_dependency 'gyoku', '~> 0.4.4'
-  s.add_runtime_dependency 'nori', '~> 1.1.0'
+  s.add_runtime_dependency 'faraday', '~> 0.9.0'
+  s.add_runtime_dependency 'gyoku', '>= 0.4.4'
+  s.add_runtime_dependency 'nori', '>= 1.1.0'
+  s.add_runtime_dependency 'nokogiri', '>= 1.6.2.1'
 
   s.add_development_dependency 'rake', '~> 0.9.2.2'
   s.add_development_dependency 'rspec', '~> 2.10.0'
