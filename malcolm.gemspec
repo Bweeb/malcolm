@@ -1,8 +1,10 @@
 $:.unshift 'lib'
 
+require 'malcolm/version'
+
 Gem::Specification.new do |s|
   s.name      = 'malcolm'
-  s.version   = '0.0.5'
+  s.version   = Malcolm::Version
   s.platform  = Gem::Platform::RUBY
   s.date      = Time.now.strftime('%Y-%m-%d')
   s.summary   = 'A collection of Faraday middleware'
